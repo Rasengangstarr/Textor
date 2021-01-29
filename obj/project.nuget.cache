@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BCHZxddaFpTQJSkp0X2qSqOc6A4t3m1LijGBNjWh+YOONWIZWyy9b1rdn/+hheevJPjYMo1gQ6MEQszKAn4GBw==",
+  "success": true,
+  "projectFilePath": "/home/david/Documents/Textor/Textor/Textor.fsproj",
+  "expectedPackageFiles": [
+    "/home/david/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
