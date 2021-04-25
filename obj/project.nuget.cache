@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BCHZxddaFpTQJSkp0X2qSqOc6A4t3m1LijGBNjWh+YOONWIZWyy9b1rdn/+hheevJPjYMo1gQ6MEQszKAn4GBw==",
+  "dgSpecHash": "pFrgDpC7c4L0VlOCCLVHUdv0zmPq11khP8myu982JDf9mJn5qWqteSFbAsS5g3goO8vpCNpu2v2e9F7uGX1k2Q==",
   "success": true,
-  "projectFilePath": "/home/david/Documents/Textor/Textor/Textor.fsproj",
-  "expectedPackageFiles": [
-    "/home/david/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "/home/dw/Code/textor/textor.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
