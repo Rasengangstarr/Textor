@@ -21,9 +21,11 @@ namespace textor.services
 
         private RoomProviderService _rps = new RoomProviderService();
         private DirectionUtils _du = new DirectionUtils();
-        public RoomService(RoomId firstRoom)
+        private readonly InventoryService _inventoryService;
+        public RoomService(RoomId firstRoom, InventoryService inventoryService)
         {
             MoveToRoom(firstRoom);
+            _inventoryService = inventoryService;
         }
         private Room _currentRoom;
         
@@ -68,6 +70,40 @@ namespace textor.services
             }
             _currentRoom = roomToMoveTo;
             DescribeCurrentRoom();
+        }
+
+        public void Open(string input){
+            List<Container> containersInRoom = _currentRoom.Objects.
+                Where(o => o is Container).ToList().Cast<Container>().ToList();
+            var container = containersInRoom.FirstOrDefault(c => input.Contains(c.Name));
+            if (container == default){
+                return;
+            }
+            
+            while (true) {
+                Console.WriteLine($"{container.Name} contents:");
+                for (int i = 0; i < container.Items.Count(); i++) {
+                    Console.WriteLine($"{i}: {container.Items[i].Name}");
+                }
+                Console.WriteLine("a: take all");
+                Console.WriteLine("c: close container");
+                Console.WriteLine(" >> ");
+                var userInput = Console.ReadLine();
+
+                if (userInput.ToLower().Contains("c")) {
+                    return;
+                }
+                else if (userInput.ToLower().Contains("a")) {
+                    foreach (var item in container.Items) {
+                        _inventoryService.Inventory.Add(item);
+                    }
+                    container.Items = new List<Item>();
+                }
+                else if (Int32.TryParse(userInput, out int selection)) {
+                    _inventoryService.Inventory.Add(container.Items[selection]);
+                    container.Items = container.Items.Where(i => container.Items[selection].Name != i.Name).ToList();
+                }
+            }
         }
     }
 }

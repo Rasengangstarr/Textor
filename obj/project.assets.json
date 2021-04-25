@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dw/Code/textor/textor.csproj",
+      "projectUniqueName": "/home/dw/Code/textor/Textor/textor.csproj",
       "projectName": "textor",
-      "projectPath": "/home/dw/Code/textor/textor.csproj",
+      "projectPath": "/home/dw/Code/textor/Textor/textor.csproj",
       "packagesPath": "/home/dw/.nuget/packages/",
-      "outputPath": "/home/dw/Code/textor/obj/",
+      "outputPath": "/home/dw/Code/textor/Textor/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/dw/.nuget/NuGet/NuGet.Config"

@@ -4,11 +4,8 @@ namespace textor.models
 {
     public class Item : GameObject
     {
-        public Item(GameObjectId id, string name, string description, string article) {
-            Id = id;
-            Name = name;
-            Description = description;
-            Article = article;
+        public Item(GameObjectId id, string name, string description, string article) :
+            base(id, name, description, article) {
         }
     }
 

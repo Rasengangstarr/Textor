@@ -21,12 +21,7 @@ namespace textor.services
                         new Exit(RoomId.EndarSpire_QuartersCorridor, Direction.South)
                     },
                     new List<GameObject>() {
-                        new Container() {
-                             Name = "Footlocker",
-                             Description = "A flat, durasteel footlocker",
-                             Article = "a",
-                             Items = new List<Item>() {_gop.GetItem(GameObjectId.short_sword)}
-                        },
+                        _gop.GetObject(GameObjectId.endarspire_quarters_footlocker)
                     },
                     () => {
                             Console.WriteLine(@"You awake in your bunk to the sound of an explosion.");

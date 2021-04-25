@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pFrgDpC7c4L0VlOCCLVHUdv0zmPq11khP8myu982JDf9mJn5qWqteSFbAsS5g3goO8vpCNpu2v2e9F7uGX1k2Q==",
+  "dgSpecHash": "sy+WwujzOO1evEDHpWBZiUyY4Udp5sP5iiRsLdaZMUKtAJuWdB4wdhcCvMxcDmW9A8hQ11tLRWAD8so9XFgDag==",
   "success": true,
-  "projectFilePath": "/home/dw/Code/textor/textor.csproj",
+  "projectFilePath": "/home/dw/Code/textor/Textor/textor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

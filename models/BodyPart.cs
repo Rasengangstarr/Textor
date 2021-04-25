@@ -7,6 +7,9 @@ namespace textor.models
         Hands,
         RightArm,
         LeftArm,
-        Body
+        LeftHand,
+        RightHand, 
+        Body,
+        Belt
     }
 }

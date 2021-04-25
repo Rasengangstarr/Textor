@@ -7,8 +7,26 @@ namespace textor.services
 {
     public class GameObjectProviderService 
     {
-        public static List<Item> AllItems =>
-            new List<Item>()
+        public GameObjectProviderService() {
+            AddContainers();
+        }
+
+        private void AddContainers()
+        {
+            AllObjects.AddRange(new List<Container> {
+                 new Container(
+                    GameObjectId.endarspire_quarters_footlocker,
+                    "footlocker",
+                    @"a long, hard cuboid object for storing stuff",
+                    // metal rectangle roughly about a foot wide with a basic touch screen lock interface
+                    "a",
+                    new List<Item>() { GetObject(GameObjectId.clothing) as Item, GetObject(GameObjectId.short_sword) as Item} 
+                )
+            });
+        }
+
+        public List<GameObject> AllObjects =
+            new List<GameObject>()
             {
                 new EquipableItem(
                     GameObjectId.long_sword,
@@ -27,10 +45,18 @@ namespace textor.services
                     "a",
                     new List<BodyPart>() { BodyPart.LeftArm, BodyPart.RightArm}
                 ),
+                new EquipableItem(
+                    GameObjectId.clothing,
+                    "clothing",
+                    "These are simple garments that protect little more than the modesty of the wearer",
+                    "some",
+                    new List<BodyPart> () { BodyPart.Body }
+                ),
+               
             };
 
-        public Item GetItem(GameObjectId id) => 
-            AllItems.FirstOrDefault(i => i.Id == id);
+        public GameObject GetObject(GameObjectId id) => 
+            AllObjects.FirstOrDefault(i => i.Id == id);
         
     }
 }
